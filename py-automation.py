@@ -26,9 +26,9 @@ app.window()
 i=1
 j=1
 for i in range(1,150):
-    for j in range(1,2):
+    for j in range(1,20):
         pywinauto.mouse.click(button='left', coords=(x,y))
-        time.sleep(3)
+        time.sleep(15)
         j=j+1
     print(str(i) + ' '  + str(x)+' '+  str(y))
     # random link
