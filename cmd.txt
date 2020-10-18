@@ -1,0 +1,3 @@
+"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" vnexpress.net
+
+psexec \\18.233.169.68 -u Administrator -p Ab123456 -d -i "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" vnexpress.net
