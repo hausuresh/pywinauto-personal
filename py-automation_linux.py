@@ -23,8 +23,14 @@ for i in range(1,120):
     link_random = random.choice(lines)
     #return app to top window
     # open link
-    brave_start_cmd = "brave-browser  " + link_random
-    os.system(brave_start_cmd)
+    #brave_start_cmd = "brave-browser  " + link_random
+    #os.system(brave_start_cmd)
+    with keyboard.pressed(Key.ctrl):
+        keyboard.press('t')
+        keyboard.release('t')    
+    keyboard.type(link_random)
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
     time.sleep(300)
     with keyboard.pressed(Key.ctrl):
         keyboard.press('2')
