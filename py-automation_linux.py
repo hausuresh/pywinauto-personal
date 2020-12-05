@@ -16,7 +16,7 @@ link_random = random.choice(lines)
 i=1
 #brave_status = r'/home/brave/Downloads/brave_status.txt'
 brave_status = '/home/brave/Downloads/brave_status.txt'
-
+print('File readable')
 def click_position(x,y,sleep_time):
     mouse.position = (x,y)
     mouse.press(Button.left)
