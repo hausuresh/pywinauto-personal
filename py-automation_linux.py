@@ -33,10 +33,11 @@ def access_new_tab(address,sleep_time):
 
 def setup_brave():
     #Welcome Page
-    f = open(brave_status, "r")
-    status = f.read(1)
-    f.close()
-    if status=='0':
+#    f = open(brave_status, "r")
+#    status = f.read(1)
+#    f.close()
+    if 1==0:
+    #if status=='0':
         time.sleep(10)
         #start brave maximized
         #Lets go
