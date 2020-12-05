@@ -36,6 +36,7 @@ def setup_brave():
     status = f.read(1)
     f.close()
     if status=='0':
+        time.sleep(10)
         #start brave maximized
         #Lets go
         click_position(390,505,2)
