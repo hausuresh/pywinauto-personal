@@ -1,3 +1,4 @@
+
 # note br linux
 import requests
 import time
@@ -15,7 +16,7 @@ link_random = random.choice(lines)
 i=1
 #brave_status = r'/home/brave/Downloads/brave_status.txt'
 brave_status = '/home/brave/Downloads/brave_status.txt'
-
+os.system('echo $(date) Loaded py file successful! >> /home/brave/Desktop/log.txt')
 def click_position(x,y,sleep_time):
     mouse.position = (x,y)
     mouse.press(Button.left)
@@ -36,7 +37,7 @@ def setup_brave():
     status = f.read(1)
     f.close()
     if status=='0':
-        time.sleep(10)
+        os.system('echo $(date) Begin setup brave! >> /home/brave/Desktop/log.txt')
         #start brave maximized
         #Lets go
         click_position(390,505,2)
@@ -73,8 +74,10 @@ def setup_brave():
         f.close()
     else: 
         print('Setup already!')
+        os.system('echo $(date) Setup already! >> /home/brave/Desktop/log.txt')
     
 def automation():
+    os.system('echo $(date) Start run automation! >> /home/brave/Desktop/log.txt')
     for i in range(1,120):
         j=1
         # random link
@@ -83,12 +86,6 @@ def automation():
         # open link
         brave_start_cmd = "brave-browser  " + link_random
         os.system(brave_start_cmd)
-        #with keyboard.pressed(Key.ctrl):
-        #    keyboard.press('t')
-        #    keyboard.release('t')    
-        #keyboard.type(link_random)
-        #keyboard.press(Key.enter)
-        #keyboard.release(Key.enter)
         time.sleep(240)
         with keyboard.pressed(Key.ctrl):
             keyboard.press('2')
