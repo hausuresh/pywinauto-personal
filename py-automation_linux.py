@@ -86,7 +86,7 @@ def automation():
         # open link
         brave_start_cmd = "brave-browser  " + link_random
         os.system(brave_start_cmd)
-        time.sleep(240)
+        time.sleep(300)
         with keyboard.pressed(Key.ctrl):
             keyboard.press('2')
             keyboard.release('2')
